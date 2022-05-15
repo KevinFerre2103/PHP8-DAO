@@ -22,8 +22,23 @@ echo json_encode($usuarios);*/
 //echo json_encode($search);
 
 //Carrega login usando user e password
+//$usuario = new Usuario();
+//$usuario->login("jose","21151561");
+//echo $usuario;
+
+//Insert usuario na procedure
+//$aluno = new Usuario("Teste","!@#$$");
+//$aluno->insert();
+//echo $aluno;
+
+//Update na tabela
 $usuario = new Usuario();
-$usuario->login("jose","21151561");
+
+$usuario->loadById(8);
+
+$usuario->update("professor","!@#$%%");
 
 echo $usuario;
+
+
 ?>
