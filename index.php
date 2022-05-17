@@ -11,7 +11,7 @@ echo json_encode($usuarios);*/
 //Carrega um usuário
 //$jose = new Usuario();
 //$jose->loadById(3);
-//echo $jose;
+///var_dump ($jose);
 
 //Carrega uma lista de usuarios
 //$list = Usuario::getList();
@@ -33,16 +33,15 @@ echo json_encode($usuarios);*/
 
 //Update na tabela
 //$usuario = new Usuario();
-//$usuario->loadById(8);
+//$usuario->loadById(7);
 //$usuario->update("professor","!@#$%%");
 //echo $usuario;
 
 //Deleta dados
-
-$usuario = new Usuario();
-$usuario->loadById(8);
-$usuario->delete();
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->loadById(8);
+//$usuario->delete();
+//echo $usuario;
 
 
 ?>

@@ -148,25 +148,27 @@ class Usuario {
 
         $sql = new Sql();
 
-        return $sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, desenha = :PASSWORD WHERE  idusuario = :ID", array(
+        $sql->execquery("UPDATE tb_usuarios SET deslogin = :LOGIN, desenha = :PASSWORD WHERE idusuario = :ID", array(
+
             ':LOGIN'=>$this->getDeslogin(),
             ':PASSWORD'=>$this->getDesenha(),
             ':ID'=>$this->getIdusuario()
         ));
 
     }
+
     public function delete(){
 
         $sql = new Sql();
 
-        return $sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+        $sql->execquery("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
             ':ID'=>$this->getIdusuario()
         ));
 
         $this->setIdusuario(0);
         $this->setDeslogin("");
         $this->setDesenha("");
-        $this->setDtcadastro(new DataTime());
+        $this->setDtcadastro(new DateTime());
 
     }
 
